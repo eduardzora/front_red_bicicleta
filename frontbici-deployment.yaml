@@ -1,0 +1,28 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: frontbici
+  labels:
+    app: frontbici
+    version: "1.0"
+spec:
+  selector:
+    matchLabels:
+      app: frontbici
+  replicas: 2
+  template:
+    metadata:
+      labels:
+        app: frontbici
+        version: "1.0"
+    spec:
+      containers:
+        - name: frontbici
+          image: icr.io/eduzora/frontbici:v1
+          resources:
+            requests:
+              cpu: 100m
+              memory: 100Mi
+          ports:
+            - name: http
+              containerPort: 80
