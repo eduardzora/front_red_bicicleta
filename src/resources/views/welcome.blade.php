@@ -36,7 +36,7 @@
     <div class="container px-4 px-lg-5">
         <!-- Heading Row-->
         <div class="row gx-4 gx-lg-5 align-items-center my-5">
-            <div class="col-lg-7"><img class="img-fluid rounded mb-4 mb-lg-0" src="images/biker.jpg" alt="..." /></div>
+            <div class="col-lg-7"><img class="img-fluid rounded mb-4 mb-lg-0" src="/images/biker.jpg" alt="..." /></div>
             <div class="col-lg-5">
                 <h1 class="font-weight-light">Red de Bicicletas</h1>
                 <p>Difundir de forma constructiva el uso de la bicicleta</p>
@@ -103,10 +103,9 @@
 
         $.ajax({
             dataType: "json",
-            url: "http://localhost:5000/lfbicicletas",
+            url: "http://169.57.110.43:30822/lfbicicletas",
             success: function(results) {
                 console.log(results);
-                debugger
                 results.forEach(function(ubi) {
                     L.marker([ubi.lactitud, ubi.longitud], {
                         title: "Bicicle Nro: " + ubi._id + "Tipo" + ubi.tipo,

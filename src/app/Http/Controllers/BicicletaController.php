@@ -17,7 +17,7 @@ class BicicletaController extends Controller
     public function show()
     {
         $client = new Client([
-            'base_uri' => 'http://localhost:3000/bicicletas',
+            'base_uri' => 'http://169.57.110.43:32014/bicicletas',
             'timeout' => 2.0
         ]);
 
@@ -29,7 +29,7 @@ class BicicletaController extends Controller
     public function showBici($id)
     {
         $client = new Client([
-            'base_uri' => 'http://localhost:3000/bicicletas',
+            'base_uri' => 'http://169.57.110.43:32014/bicicletas',
             'timeout' => 2.0
         ]);
 
@@ -46,7 +46,7 @@ class BicicletaController extends Controller
     public function createBici(Request $request)
     {
         $client = new Client([
-            'base_uri' => 'http://localhost:3000/bicicletas',
+            'base_uri' => 'http://169.57.110.43:32014/bicicletas',
             'timeout' => 2.0
         ]);
 
@@ -64,7 +64,7 @@ class BicicletaController extends Controller
         ]);
 
         $client = new Client([
-            'base_uri' => 'http://localhost:3000/bicicletas',
+            'base_uri' => 'http://169.57.110.43:32014/bicicletas',
             'timeout' => 2.0
         ]);
 
@@ -76,7 +76,7 @@ class BicicletaController extends Controller
     public function upBici2($id, Request $request)
     {
         $client = new Client([
-            'base_uri' => 'http://localhost:3000/bicicletas',
+            'base_uri' => 'http://169.57.110.43:32014/bicicletas',
             'timeout' => 2.0
         ]);
         $color = $request->input("color");
@@ -94,7 +94,7 @@ class BicicletaController extends Controller
         ]);
 
         $client = new Client([
-            'base_uri' => 'http://localhost:3000/bicicletas',
+            'base_uri' => 'http://169.57.110.43:32014/bicicletas',
             'timeout' => 2.0
         ]);
 
@@ -106,14 +106,14 @@ class BicicletaController extends Controller
     public function deltBici($id)
     {
         $client = new Client([
-            'base_uri' => 'http://localhost:3000/bicicletas',
+            'base_uri' => 'http://169.57.110.43:32014/bicicletas',
             'timeout' => 2.0
         ]);
 
         $response = $client->request('DELETE', "bicicletas/{$id}/delete");
 
         $client = new Client([
-            'base_uri' => 'http://localhost:3000/bicicletas',
+            'base_uri' => 'http://169.57.110.43:32014/bicicletas',
             'timeout' => 2.0
         ]);
 
