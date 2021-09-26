@@ -1,0 +1,17 @@
+/node_modules
+/public/hot
+/public/storage
+/storage/*.key
+/vendor
+.env
+.env.backup
+.phpunit.result.cache
+docker-compose.override.yml
+Homestead.json
+Homestead.yaml
+npm-debug.log
+yarn-error.log
+/.idea
+/.vscode
+src/* # para que se lleve el contenido de src, dejandome la carpeta src
+mysql/* # que se lleve todo el contenido de mysql excepto la misma carpeta
